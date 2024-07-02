@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayL {
+    ArrayList<String> list = new ArrayList<String>();
+    public void arrayDisplay(){
+        list.add("CSE");
+        list.add("DSE");
+        System.out.println("ArrayList elements are:");
+        System.out.println(list);
+        System.out.println(" ");
+    }
+    public void appendAtEnd(){
+        System.out.println("Enter the elements to append at end:");
+        Scanner s=new Scanner(System.in);
+        String ele=s.next();
+        list.add(ele);
+        System.out.println(list);
+        System.out.println(" ");
+    }
+    public void insertatpos(){
+        System.out.println("Enter the position and element to insert:");
+        Scanner s=new Scanner(System.in);
+        int posind=s.nextInt();
+        String ele=s.next();
+        list.add(posind,ele);
+        System.out.println(list);
+        System.out.println();
+    }
+    public void searchele(){
+        System.out.println("Enter the Array element to search:");
+        Scanner s=new Scanner(System.in);
+        String arele=s.next();
+        int in=list.indexOf(arele);
+        if(in==-1){
+            System.out.println("Element not found");
+        }
+        else{
+            System.out.println("Element found at "+in);
+        }
+    }
+    public void print(){
+        System.out.println("\nEnter the starting character to print strings:");
+        Scanner nip=new Scanner(System.in);
+        char inputc=nip.next().charAt(0);
+        String strc=Character.toString(inputc);
+        System.out.println("String starting with character "+strc+" is:");
+        for(int i=0;i<list.size();i++){
+            if(list.get(i).startsWith(strc)){
+                System.out.println(list.get(i));
+            }
+        }
+    }
+    public static void main(String[] args){
+        ArrayL obj=new ArrayL();
+        obj.arrayDisplay();
+        obj.appendAtEnd();
+        obj.insertatpos();
+        obj.searchele();
+        obj.print();
+    }
+}
