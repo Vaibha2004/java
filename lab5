@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+public class lab5java {
+    public static void main(String[] args){
+        ArrayList<String> mylist = new ArrayList<>();
+        mylist.add(0, "NCET");
+        mylist.add(1, "CSE");
+        mylist.add("ISE");
+        mylist.add("DS");
+        System.out.println("List before removed:"+mylist);
+        String firstelement = mylist.remove(0);
+        String Lastelement=mylist.remove(mylist.size()-1);
+        System.out.println("List after removal:"+mylist);
+        System.out.println("first element removed:"+firstelement);
+        System.out.println("Last element removed: "+Lastelement);   
+    }
+}
