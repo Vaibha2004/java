@@ -21,7 +21,7 @@ public class lab6java {
         }
         System.out.println("\nUsing ListIterator(backward):");
         while(listIterator.hasPrevious()){
-            System.out.println (listIterator.previous()); 
+            System.out.println(listIterator.previous()); 
         }
     }   
 }
